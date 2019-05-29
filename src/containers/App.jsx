@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import { pingStore } from '../../store/reducers/schedules'
 import './App.less'
 
 class App extends Component {
@@ -12,10 +12,8 @@ class App extends Component {
     render() {
 
         return (
-            <div>scheduler</div>
+            <div onClick={() => pingStore()}>scheduler</div>
         );
     }
 }
 export default App;
-
-ReactDOM.render(<App />, document.getElementById("root"))
